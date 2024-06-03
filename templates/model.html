@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ model.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <nav class="header__nav">
+                    <img class="header__icon" src="{% static 'images/door-header.png' %}">
+                    <ul class="header__menu">
+                        <a class="add-review" href="{% url 'shop:main' %}">Повернутися на головну сторінку</a>
+                    </ul>
+                </nav>
+                <button class="header__button custom-modal-btn-open" type="button">
+                    <img class="header__button__image" src="{% static '/images/shopping-box.png' %}" alt="shopping-box">
+                </button>
+
+                <button class="header__button modal-btn-open" type="button">
+
+                <img class="header__button__image" src="{% static '/images/shopping-box.png' %}" alt="shopping-box">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="door-content">
+            <div class="door-content__container-div">
+
+                <div class="door-photo-d">
+                    
+                    <img class="doors-card__img" src="{{ model.image.url }}" alt="door">
+                </div>
+
+                <div class="door-information">
+                    <h2 class="review-card__h">{{ model.name }}</h2>
+                    
+                    <h2 class="review-card__price">{{ model.price }}</h2>
+                    
+                    <p class="review-card__text">{{ model.info }}</p>
+                </div>
+                
+                <div class="door-table">
+                    <h2>Характеристики дверей</h2>
+
+                    <table>
+                        <tr>
+                          <td class="property">Назва</td>
+                          <td>Двері №1</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Матеріал</td>
+                          <td>Дерево</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Колір</td>
+                          <td>Коричневий</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Розмір</td>
+                          <td>80x200 см</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Товщина</td>
+                          <td>4 см</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Тип</td>
+                          <td>Вхідна</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Ціна</td>
+                          <td>1000 грн</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Вага</td>
+                          <td>25 кг</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Виробник</td>
+                          <td>Компанія A</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Доступність</td>
+                          <td>В наявності</td>
+                        </tr>
+                        <tr>
+                          <td class="property">Гарантія</td>
+                          <td>1 рік</td>
+                        </tr>
+                      </table>
+
+                </div>
+                
+                
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-container">
+
+                <nav class="footer-nav">
+                    <img class="footer-icon" src="{% static 'images/door-header.png' %}">
+
+                </nav>
+
+
+
+                <ul class="address-list">
+                    <li>
+
+                        <a class="adress-link" href="tel:+380967230688">+ 38 (096) 723 0688</a>
+                    </li>
+                    <li>
+
+                        <a class="adress-link" class="email"
+
+                            href="mailto:shap.pavel2007@gmail.com">shap.pavel2007@gmail.com</a>
+                    </li>
+                    <li>
+
+                        <a class="adress-link" href="https://maps.app.goo.gl/rR6YEFzSpsnSgyvq5" target="_blank">Україна,
+                            м.Вінниця вул. Є.Чикаленка 44/2" </a>
+                    </li>
+
+                </ul>
+
+                <div class="address-info">
+                    <a class="adress-link__politics"
+                        href="https://docs.google.com/document/d/1MhXjf2BX_Cfh5U9Iew-anAmXMaCUgMEf/edit?usp=drive_link&ouid=103837405395080687498&rtpof=true&sd=true"
+                        target="_blank">Політика конфіденційності</a>
+                    <p class="address-copyright">
+                        &copy; 2022 Дані захищені
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class=" header__button modal__btn-close modal-btn-close" type="button">
+                <img class="header__button__image" src="{% static '/images/close.png' %}" alt="close">
+            </button>
+            <div class="modal__container">
+                <h2 class="modal__h2">Замовити дзвінок</h2>
+                <p class="modal__text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+            </div>
+            <form name="contact-form" autocomplete="on">
+
+
+                <div class="modal__form-field input">
+                    <label class="form-label visually-hiden" for="user-name">
+                        Ім'я
+                    </label>
+                    <input class="input__control" type="text" name="user-name" id="user-name" placeholder="Ім'я" required />
+
+                </div>
+
+                <div class="modal__form-field input">
+                    <label class="form-label visually-hiden" for="user-tel">
+                        Телефон
+                    </label>
+                    <input class="input__control" type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required />
+
+                </div>
+
+                <div class="modal__form-field input">
+                    <label class="form-label visually-hiden" for="user-email">
+                        Електронна пошта
+                    </label>
+                    <input class="input__control" type="email" name="user-email" id="user-email"
+                        placeholder="Електронна пошта" required />
+
+                </div>
+
+                <button class=" modal__button button" type="submit" disabled>
+                    Замовити дзвінок
+                </button>
+                <p class="form-terms">
+                    Натискаючи на кнопку я погоджуюсь з <a class="form-terms__link" href='https://docs.google.com/document/d/1MhXjf2BX_Cfh5U9Iew-anAmXMaCUgMEf/edit?usp=drive_link&ouid=103837405395080687498&rtpof=true&sd=true'
+                        target="_blank">політикою конфіденційності</a>
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="custom-backdrop is-hidden " id="customBackdrop">
+        <div class="modal-custom">
+            <button class=" header__button modal__btn-close custom-modal-btn-close" id="customModalBtnClose" type="button">
+                <img class="header__button__image" src="{% static '/images/close.png' %}" alt="close">
+            </button>
+            <div class="modal__container">
+                <h2 class="modal__h2">Вхід на сайт</h2>
+            
+            </div>
+
+            {% if form.errors %}
+            <p class="custom-backdrop__text-error"><b>спробуй знову</b> </p>
+            {% endif %}
+
+
+            <form method="post" action="{% url 'users:login' %}">
+
+                
+
+                <div class="modal-custom__inp-cont">
+                    <label class="modal-custom__label">Ім'я</label>
+                    <div class="modal-custom__inp-cont">{% csrf_token %}</div>
+                </div>
+                
+
+
+                <div class="modal-custom__inp-cont">
+                    <label class="modal-custom__label">Щось про вас???</label>
+                <div class="modal-custom__inp-cont">{{ form.as_p }}</div>
+                </div>
+
+                <button class="button__log" name = "sumbit">Увійти</button>
+                <input type="hidden" name="next"
+                    value="{% url 'shop:main' %}"/>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static '/js/modal_acc.js' %}"></script>
+    <script src="{% static '/js/modal.js' %}"></script>
+
+
+</body>
+</html>

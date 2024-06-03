@@ -1,0 +1,273 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мрійливі двері</title>
+    <link rel="icon" href="./images/door-icon.ico.png">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <nav class="header__nav">
+                    <img class="header__icon" src="./images/door-header.png">
+                    <ul class="header__menu">
+                        <li><a class="link" href="#hero-section">Про нас</a></li>
+                        <li><a class="link" href="#content-section">Формати дверей</a></li>
+                        <li><a class="link" href="#review-section">Відгуки</a></li>
+                        <li><a class="link" href="#footer">Контакти</a></li>
+                    </ul>
+                </nav>
+                <button class="header__button" type="button">
+                    <svg class="header__button__image" width="40px" height="40px">
+                        <use href="./images/symbol-defs.svg#icon-shopping-cart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="hero-section"> 
+            <div class="hero-section__container">
+                <div class="container_">
+                    <h1 class="hero-section__title">Мрійливі двері</h1>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="advantages-section">
+            <div class="container">
+            </div>
+        </section>
+
+        <section class="content-section" id="content-section"> 
+            <div class="container content-sction">
+
+                <div class="content-section__container-div">
+                    <div class="content-section__type">
+                        <ul>
+                            <h3>Типи</h3>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-section__container">
+                        <ul class="content-section__list">
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                   
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                    
+                            <li>
+                                <article class="doors-card">
+                                    <img class="doors-card__img" src="{{ model.image.url }}" alt="">
+                                    <h3>Двері - <span>{{model.name}}</span></h3>
+                                    <p>{{model.info}}</p>
+                    
+                                    
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="advantages-section">
+            <div class="container">
+            </div>
+        </section>
+        
+        <section class="review-section" id="review-section">     
+            <div class="container">
+                <ul class="review-section__list">
+                    <li>
+                        <article class="review-card">
+                            <h4 class="review-card__h" >Ольга Малинко</h4>
+                            <p>Швидка доставка, стильні двері, низька ціна. Все вражаюче і задовільне!</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="review-card">
+                            <h4 class="review-card__h" >Тарас мирний</h4>
+                            <p>Великий вибір, оперативна доставка. Двері відмінної якості. Рекомендую з упевненістю!</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="review-card">
+                            <h4 class="review-card__h" >Микола Щур</h4>
+                            <p>Простий вибір, вигідна ціна, якісні двері. Все чудово і задовільно.</p>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="review-card">
+                            <h4 class="review-card__h" >Наталія Стерненко</h4>
+                            <p>Швидко, зручно, якісно. Двері виглядають ідеально. Супер задоволений своєю покупкою!</p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <section class="advantages-section">
+        <div class="container">
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-container">
+    
+                <nav class="footer-nav">
+                    <img class="footer-icon" src="./images/door-header.png">
+    
+                </nav>
+    
+                
+    
+                    <ul class="address-list">
+                        <li>
+                            <a class="adress-link" href="tel:+380967230688">+ 38 (096) 723 0688</a>
+                        </li>
+                        <li>
+                            <a class="adress-link" class="email" href="mailto:shap.pavel2007@gmail.com">shap.pavel2007@gmail.com</a>
+                        </li>
+                        <li>
+                            <a class="adress-link" href="https://maps.app.goo.gl/rR6YEFzSpsnSgyvq5" target="_blank">Україна,
+                                м.Вінниця вул. Є.Чикаленка 44/2" </a>
+                        </li>
+                        
+                    </ul>
+    
+                    <div class="address-info">
+                        <a class="adress-link__politics" href="https://docs.google.com/document/d/1MhXjf2BX_Cfh5U9Iew-anAmXMaCUgMEf/edit?usp=drive_link&ouid=103837405395080687498&rtpof=true&sd=true" target="_blank">Політика конфіденційності</a>
+                        <p class="address-copyright">
+                            &copy; 2022 Дані захищені
+                    </div>
+                
+            </div>
+    
+        </div>
+    </footer>
+</body>
+
+</html>
